@@ -1,0 +1,64 @@
+.key-row {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.key-row .num-btn:nth-child(1) {
+  border-left: 1rpx solid #ccc;
+}
+
+
+.num-btn {
+  width: 25%;
+  text-align: center;
+  padding: 34rpx 0;
+  line-height: 60rpx;
+  border-top: 1rpx solid #ccc;
+  border-left: 1rpx solid #ccc;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.num-btn:active {
+  background-color: #f0f0f0;
+}
+
+.confirm {
+  position: absolute;
+  height: 264rpx;
+  line-height: 262rpx;
+  padding: 0;
+  background-color: #e9823d;
+  color: #fff;
+}
+
+.confirm:active {
+  background-color: #e07229;
+}
+
+.priceVal {
+  padding:35rpx 30rpx 30rpx;
+  font-size: 40rpx;
+  height: 117rpx;
+  box-sizing: border-box;
+}
+
+.add_number_keybord {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  transition: all .3s ease;
+}
+
+.keypadContainer {
+  position: absolute;
+  background: #fff;
+  height: 760rpx;
+  width: 100%;
+  transition: all .3s ease;
+}

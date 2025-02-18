@@ -1,0 +1,10 @@
+{
+    "navigationStyle": "custom",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black",
+    "componentFramework": "glass-easel",
+    "usingComponents": {
+        "f2": "@antv/wx-f2"
+    }
+}

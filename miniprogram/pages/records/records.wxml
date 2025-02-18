@@ -1,0 +1,45 @@
+<view class="records_container">
+  <view class="records_title">
+    <view class="records_btn {{query.type === '0' ? 'selected' : ''}}" bindtap="onTypeSelect" data-type="0">支出</view>
+    <view class="records_btn {{query.type === '1' ? 'selected' : ''}}" bindtap="onTypeSelect" data-type="1">收入</view>
+  </view>
+  <view class="records_box">
+    <input class="amount" value="{{query.amount}}" type="number" />
+  </view>
+  <view class="records_box" style="padding:16rpx;">
+    <view class="records_btn category_btn {{query.categoryName==item.name?'selected':''}}" data-categoryname="{{item.name}}" bindtap="onCategorySelect" wx:for="{{categoryInfo}}" wx:key="name" wx:if="{{index < 11}}">{{item.name}}</view>
+    <view class="records_btn all_category_btn" bindtap="onCategorySelect" data-categoryname="-1">全部</view>
+  </view>
+  <view class="records_box" style="padding:12rpx 32rpx 30rpx;">
+    <input value="{{query.description}}" bindinput="onDescriptionChange" class="remark_input" type="text" placeholder="点击添加备注" placeholder-class="placeholder-style" />
+  </view>
+  <view class="date_box">
+    <view class="date_btn {{dateflag === '0' ? 'selected' : ''}}" data-dateflag="0" bindtap="onDateSelect">今天</view>
+    <view class="date_btn {{dateflag === '1' ? 'selected' : ''}}" data-dateflag="1" bindtap="onDateSelect">昨天</view>
+    <view class="date_btn {{dateflag === '2' ? 'selected' : ''}}" data-dateflag="2" bindtap="onDateSelect">前天</view>
+    <picker class="date_btn  {{dateflag === '3' ? 'selected' : ''}}" mode="date" data-dateflag="3" bindchange="onDateSelect">
+      <view>{{dateflag !== '3'?'自选时间':query.recordDate }}</view>
+    </picker>
+  </view>
+  <view class="time_box">
+    <view class="date_btn selected" data-dateflag="0" bindtap="onDateSelect">{{time}}</view>
+  </view>
+  <view wx:if="{{categorySelectShow}}" class="modal" bindtap="modalClose">
+    <view class="modal-content">
+      <view class="records_btn category_btn" data-c_index="{{index}}" data-categoryname="{{item.name}}" bindtap="onModalCategorySelect" wx:for="{{categoryInfo}}" wx:key="name" wx:if="{{index >= 11}}">{{item.name}}</view>
+      <view class="records_btn category_btn add_btn" data-categoryname="新增" catchtap="onModalCategoryAdd">新增</view>
+    </view>
+  </view>
+  <view wx:if="{{categoryAddShow}}" class="modal">
+    <view class="modal-content">
+      <view class="input-box">
+        <input type="text" placeholder="分类名称" bindinput="onCategoryNameInput" value="{{categoryQuery.name}}" />
+      </view>
+      <view class="button-box">
+        <button class="cancel-btn" bindtap="onModalCategoryAddClose">取消</button>
+        <button class="confirm-btn" bindtap="onModalCategoryAddSubmit">确定</button>
+      </view>
+    </view>
+  </view>
+  <button disabled="{{btnDisabled}}" class="records_confirm_btn" bindtap="onConfirm">点击确认</button>
+</view>

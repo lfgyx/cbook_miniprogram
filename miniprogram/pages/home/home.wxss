@@ -1,0 +1,247 @@
+.homeContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: left;
+  background: #f5f5f5;
+}
+
+.head-button-box {
+  padding-left: 20rpx;
+}
+
+
+.homeContainer button {
+  width: 120px;
+  background: transparent;
+  color: #fff;
+  font-weight: normal;
+  font-family: 'Microsoft YaHei', sans-serif;
+  letter-spacing: 1rpx;
+  margin-left: 0;
+  margin-bottom: 20rpx;
+  text-align: left;
+  position: relative;
+  border: none;
+}
+
+.homeContainer .head-section {
+  height: 610rpx;
+  position: relative;
+  padding: 0;
+  background: linear-gradient(to bottom, #e9823d 0%, #e9823d 30%, #f5f5f5 70%);
+}
+
+.arr-down {
+  width: 44rpx;
+  height: 44rpx;
+  color: #fff;
+  margin-left: 4px;
+  position: absolute;
+  top: 30rpx;
+}
+
+.cost-section {
+  width: 90%;
+  margin: auto;
+  height: 400rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  /* 圆角，可选 */
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.2);
+  /* 阴影 */
+  box-sizing: border-box;
+  padding: 20rpx;
+  overflow: hidden;
+
+}
+
+.cost-section .time-box {
+  font-size: 24rpx;
+  color: #666;
+  margin: 10px;
+}
+
+.cost-section .money-box {
+  font-size: 44rpx;
+  margin: 20rpx;
+  font-weight: 700;
+}
+
+.cost-section .money-box.red {
+  color: #FF4C4C;
+}
+
+.cost-section .money-box.green {
+  color: #4CAF50;
+}
+
+.income {
+  float: right;
+  font-size: 20rpx;
+  margin-top: 16rpx;
+  margin-right: 4px;
+  color: #999;
+  font-weight: normal;
+}
+
+.arr-right {
+  float: right;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.chart-container {
+  width: 100%;
+  height: 220rpx;
+}
+
+.title-box,
+.records-box {
+  padding: 0 30rpx;
+}
+
+.yesterday-section {
+  width: 90%;
+  margin: 10rpx 5% 0;
+  height: 480rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  /* 圆角，可选 */
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.2);
+  /* 阴影 */
+  box-sizing: border-box;
+  padding: 30rpx 10rpx;
+
+}
+
+.yesterday-section .yesterday-title {
+  font-size: 32rpx;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.yesterday-right-box {
+  float: right;
+  margin-top: 2rpx;
+}
+
+.yesterday-right-box.closeBtn {
+  margin-top: -24rpx;
+  margin-right: 10rpx;
+  font-size: 46rpx;
+}
+
+.yesterday-section .right-text {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #999;
+  vertical-align: top;
+  margin-right: 18rpx;
+}
+
+.yesterday-section .records-box {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.yesterday-section .records-box .record {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 130rpx;
+}
+
+.record-title {
+  font-size: 32rpx;
+}
+
+.record-time {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.dot {
+  width: 6rpx;
+  height: 6rpx;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #999;
+  vertical-align: middle;
+  margin: 0 12rpx;
+}
+
+.green-dot,
+.red-dot {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.green-dot {
+  background-color: #4CAF50;
+}
+
+.red-dot {
+  background-color: #FF4C4C;
+}
+
+.record-middle {
+  display: inline-block;
+  padding-left: 30rpx;
+}
+
+.record-remark {
+  font-size: 24rpx;
+  display: inline-block;
+  margin-left: 10rpx;
+  color: #999;
+}
+
+.record-right {
+  margin-left: auto;
+}
+
+.none-records {
+  text-align: center;
+  margin-top: 160rpx;
+  color: #666;
+}
+
+.modal-container {
+  transition: all .5s;
+}
+
+.yesterday-section {
+  transition: all .8s;
+}
+
+.openRecords {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 99998;
+}
+
+.openRecordsBox {
+  position: fixed;
+  width: 100%;
+  height: calc(100% - 370rpx);
+  z-index: 99999;
+  margin: -240rpx 0 0;
+}
+
+.openRecordsBox .records-box {
+  padding-bottom: 200rpx;
+}

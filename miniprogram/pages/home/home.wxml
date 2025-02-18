@@ -1,0 +1,50 @@
+<view class="homeContainer">
+  <view class="head-section">
+    <view class="head-button-box" style="padding-top:{{statusBarHeight}}px">
+      <button plain class="head-button" bindtap="goPath" data-path="/pages/ledgers/ledgers">{{activeLedger.name||'无'}}
+        <!-- <image class="arr-down" src="/images/arr-down.png" mode="" /> -->
+      </button>
+    </view>
+
+    <view class="cost-section">
+      <view class="time-box">
+        当月支出
+      </view>
+      <view class="money-box red" wx:if="{{totalMonthlyExpenses}}">
+        {{(totalMonthlyExpenses!=0?'-':'')+totalMonthlyExpenses}}
+        <view class="income">当月收入： {{totalMonthlyIncome}}</view>
+      </view>
+      <view class="chart-container">
+        <f2 wx:if="{{chartShow}}" class="f2-chart" onInit="{{onInitChart}}" />
+      </view>
+    </view>
+  </view>
+  <view class="modal-container {{openRecordsSwitch?'openRecords':''}}" bindtap='closeRecords'></view>
+  <view class="yesterday-section  {{openRecordsSwitch?'openRecordsBox':''}}">
+    <view class="title-box">
+      <view class="yesterday-title">交易记录</view>
+      <view class="yesterday-right-box" bindtap="openRecords" wx:if="{{!openRecordsSwitch}}">
+        <view class="right-text" wx:if="{{totalMonthlyExpenses!=0}}">-{{totalMonthlyExpenses}}</view>
+        <image class="arr-right" src="/images/arr-right.png" mode="" />
+      </view>
+      <view wx:else class="yesterday-right-box closeBtn" bindtap='closeRecords'>x</view>
+    </view>
+    <view class="records-box" wx:if="{{ledgerEntries.length>0}}">
+      <view class="record" wx:if="{{openRecordsSwitchDelay?true:index<3}}" wx:for="{{ledgerEntries}}" wx:key="id">
+        <view class="red-dot"></view>
+        <view class="record-middle">
+          <view class="record-title">
+            {{item.category_name}}
+            <view class="record-remark">{{item.description}}</view>
+          </view>
+          <view class="record-title2">
+            <view class="record-time">{{item.record_date}}</view>
+          </view>
+        </view>
+        <view class="record-right">{{item.amount}}</view>
+      </view>
+    </view>
+    <view class="none-records" wx:else>暂无交易记录</view>
+  </view>
+  <!-- <num-keypad value="{{inputValue}}" bindinput="handleInput" bindconfirm="handleConfirm" /> -->
+</view>

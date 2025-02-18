@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+    <view class="container">
+        <view class="userinfo">
+            <block>
+                <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+                    <image class="avatar" src="{{userInfo.avatar_url || defaultAvatarUrl}}"></image>
+                </button>
+                <view class="nickname-wrapper">
+                    <text class="nickname-label">昵称</text>
+                    <input value="{{userInfo.nick_name}}" type="nickname" class="nickname-input" placeholder="请输入昵称" bindinput="handleInput" />
+                </view>
+            </block>
+            <view class="tiptextAlign" style="margin-top:80px;">
+                {{userInfo.avatar_url ?'':'请上传头像'}}
+            </view>
+            <view class="tiptextAlign">
+                {{userInfo.nick_name?'':'请输入昵称'}}
+            </view>
+        </view>
+        <view class="usermotto">
+            <button bind:tap="updateProfile" type="primary" disabled="{{!userInfo.nick_name || !userInfo.avatar_url}}">确认</button>
+            <!-- <text class="user-motto">{{motto}}</text> -->
+        </view>
+    </view>
+</scroll-view>

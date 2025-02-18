@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+    <view class="falimyContainer">
+        <view class="familyinfo">
+            <block>
+                <view class="family-wrapper">
+                    <text class="family-label">家庭名称</text>
+                    <input value="{{familyInfo.family_name}}" type="text" class="family-input" placeholder="请输入家庭名称" bindinput="handleInput" />
+                </view>
+                <view class="family-wrapper">
+                    <text class="family-label-text">家庭描述</text>
+                    <textarea style="height:60px;" value="{{familyInfo.description1}}" class="family-input" placeholder="请输入第一段家庭描述，不填则不显示" bindinput="handledesc1" />
+                </view>
+                <view class="family-wrapper">
+                    <text class="family-label-text">家庭描述</text>
+                    <textarea style="height:60px;" value="{{familyInfo.description2}}" class="family-input" placeholder="请输入第二段家庭描述，不填则不显示" bindinput="handledesc2" />
+                </view>
+            </block>
+        </view>
+        <view class="usermotto">
+            <button bind:tap="createFamily" type="primary" disabled="{{!familyInfo.family_name}}">确认</button>
+        </view>
+    </view>
+</scroll-view>

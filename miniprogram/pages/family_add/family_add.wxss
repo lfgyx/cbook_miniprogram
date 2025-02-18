@@ -1,0 +1,60 @@
+/**index.less**/
+page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.falimyContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100rpx 0 250rpx;
+    box-sizing: border-box;
+  } 
+
+.scrollarea {
+    flex: 1;
+    overflow-y: hidden;
+}
+
+.familyinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #aaa;
+    width: 100%;
+}
+
+.family-wrapper {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    border-top: .5px solid rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.family-label {
+    width: 80px;
+}
+.family-label-text {
+    width: 92px;
+}
+
+.nickname-input {
+    flex: 1;
+}
+
+.tiptextAlign {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 28rpx;
+    color: rgb(255, 0, 0);
+}
+
+.usermotto{
+  width: 80%;
+}

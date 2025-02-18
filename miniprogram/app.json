@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/mine/mine",
+    "pages/info_add/info_add",
+    "pages/family_add/family_add",
+    "pages/cases/cases",
+    "pages/logs/logs",
+    "pages/bill_add/bill_add",
+    "pages/category/category",
+    "pages/ledgers/ledgers",
+    "pages/records/records",
+    "pages/family_member/family_member"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "小枫账本",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#171717",
+    "selectedColor": "#e9823d",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home2.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "",
+        "iconPath": "images/mine2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine2.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "componentFramework": "glass-easel",
+  "lazyCodeLoading": "requiredComponents",
+  "miniApp": {
+    "useAuthorizePage": true
+  }
+}

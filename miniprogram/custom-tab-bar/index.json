@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "num-keypad": "/components/num-keypad/num-keypad"
+  }
+}

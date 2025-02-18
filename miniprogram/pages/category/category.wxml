@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<scroll-view class="category" scroll-y type="list">
+    <view class="cateBox">
+        <view class="cate_list" wx:for="{{categoryInfo}}" wx:key="text">
+            <view class="cate_icon">
+                <image src="/images/book.png" mode="" />
+            </view>
+            <view class="cate_title">{{item.name}}</view>
+            <view class="delete_btn" bindtap="delete_btn" data-id="{{item.id}}">
+                <image src="/images/delete.png" mode="" />
+            </view>
+        </view>
+        <view bindtap="add_cate_btn_click" class="add_cate_btn">
+            <image class="add_btn" src="/images/add.png" mode="" />
+        </view>
+    </view>
+    <view wx:if="{{showModal}}" class="modal">
+        <view class="modal-content">
+            <view class="input-box">
+                <input type="text" placeholder="分类名称" bindinput="onNameInput" value="{{query.name}}" />
+            </view>
+            <view class="button-box">
+                <button class="cancel-btn" bindtap="closeModal">取消</button>
+                <button class="confirm-btn" bindtap="add_category">确定</button>
+            </view>
+        </view>
+    </view>
+</scroll-view>
