@@ -11,12 +11,6 @@ This is a simple and practical expense tracker mini program designed to help use
 - **Account Management**: Support multiple account selection and switching.
 - **Chart Analysis**: Present financial income and expense changes through charts to help users intuitively understand their financial status.
 
-<img src="./miniprogram/images/qrcode.png" width="300" />
-<div>
-   <img src="./miniprogram/images/example1.jpg" width="300" />
-   <img src="./miniprogram/images/example2.jpg" width="300" />
-</div>
-
 ## Technology Stack
 - **Frontend**: WeChat Mini Program Framework
 - **Backend**: [Backend GitHub Repository](https://github.com/lfgyx/cbook_nodejs.git)

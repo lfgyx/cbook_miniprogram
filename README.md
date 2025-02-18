@@ -10,13 +10,6 @@
 - **账户管理**：支持多账户选择和切换。
 - **图表分析**：通过图表呈现财务收支变化，帮助用户直观了解财务状况。
 
-<img src="./miniprogram/images/qrcode.png" width="300" />
-<div>
-   <img src="./miniprogram/images/example1.jpg" width="300" />
-   <img src="./miniprogram/images/example2.jpg" width="300" />
-</div>
-
-
 ## 技术栈
 - **前端**：微信小程序框架
 - **后端**：[后端 GitHub 地址](https://github.com/lfgyx/cbook_nodejs.git)。
