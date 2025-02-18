@@ -3,6 +3,12 @@
 ## 简介
 这是一款简单实用的记账小程序，旨在帮助用户轻松记录每日的支出与收入。用户可以通过简单的操作添加账单，查看当月支出、收入和交易记录，帮助更好地管理个人财务。
 
+<img src="./miniprogram/images/qrcode.png" width="300" />
+<div>
+   <img src="./miniprogram/images/example1.jpg" width="300" />
+   <img src="./miniprogram/images/example2.jpg" width="300" />
+</div>
+
 ## 功能特点
 - **收入与支出记录**：方便记录每一笔收支，包括日期和金额。
 - **数据统计**：自动计算本月的总支出和收入。

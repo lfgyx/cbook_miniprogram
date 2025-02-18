@@ -4,6 +4,12 @@
 ## Introduction
 This is a simple and practical expense tracker mini program designed to help users easily record daily expenses and income. Users can add bills with simple operations, view monthly expenses, income, and transaction records, helping to better manage personal finances.
 
+<img src="./miniprogram/images/qrcode.png" width="300" />
+<div>
+   <img src="./miniprogram/images/example1.jpg" width="300" />
+   <img src="./miniprogram/images/example2.jpg" width="300" />
+</div>
+
 ## Features
 - **Income and Expense Records**: Conveniently record every income and expense, including date and amount.
 - **Data Statistics**: Automatically calculate the total expenses and income for the current month.
